@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/css/tailwind.css">
   <script>
     var cont=0;
 function loopSlider(){
@@ -88,7 +89,6 @@ function sliderButton1(){
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
     <nav class="flex items-center bg-red-700 p-3 flex-wrap ">
       <a href="#" class="p-2 mr-4 inline-flex items-center">
@@ -137,7 +137,7 @@ function sliderButton1(){
           <span>Мэдээ мэдээлэл</span>
         </a>
           <a
-            href="#"
+            href="anime.html"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
           >
             <span>Бүх гаралт</span>
@@ -171,25 +171,29 @@ function sliderButton1(){
       </div>
 
       <div id="slider-2" class="container mx-auto">
-        <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1544144433-d50aff500b91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)">
-         
-    </div> <!-- container -->
+        <div class="bg-cover bg-top  h-auto text-white py-24 px-10 object-fill" style="background-image: url(https://images.unsplash.com/photo-1544144433-d50aff500b91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)">        
+    </div> 
       <br>
       </div>
     </div>
-    
  <div  class="flex justify-between w-12 mx-auto pb-2">
         <button id="sButton1" onclick="sliderButton1()" class="bg-red-700 rounded-full w-4 pb-2 " ></button>
     <button id="sButton2" onclick="sliderButton2() " class="bg-red-700 rounded-full w-4 p-2"></button>
   </div>
+
+  <!--                                             Content ууд                           -->
   <div>
-  <div class="flex mb-4 mx-8">
-    <div class = 'title' >Гарч буй anime ууд</div>
-    <div class="w-10/12 p-8 bg-gray-400 text-center">Anime</div>
-    <div class="w-2/12 p-8 bg-gray-800 text-center">Banner</div>
-  </div>
-  <div class="flex mb-4 mx-8">
-    <div class="w-10/12 p-8 bg-gray-400 text-center">News</div>
+  <h4 class='fond-bold mt-12 pb-2 border-b border-gray-200 text-3xl mr-8'> Гарч буй anime ууд </h4>
+  <div class="mt-8 grid grid-cols">
+    <div class ='card'>
+      <img src="/src/img/pexels-belle-co-402028.jpg" alt='stew' class = 'w-full h-32 sm:h-48 object-cover'>
+      <div class = 'm4'>
+        <span class="font-bold"> blabla anime</span>
+        <span class="block text-gray-500 text-sm"> hohohooh</span>
+      </div>
+    <div class="badge">
+      <span>25mins</span>
+    </div>
   </div>
 </div>
   </body>
