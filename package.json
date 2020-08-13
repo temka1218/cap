@@ -1,0 +1,25 @@
+{
+  "name": "cap",
+  "version": "1.0.0",
+  "description": "niggas with attitude",
+  "main": "script.js",
+  "dependencies": {
+    "mysql": "^2.18.1",
+    "tailwindcss": "^1.6.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/temka1218/cap.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/temka1218/cap/issues"
+  },
+  "homepage": "https://github.com/temka1218/cap#readme"
+}
