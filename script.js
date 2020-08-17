@@ -7,8 +7,6 @@ var connection = mysql.createConnection({
   password: "",
   database: "",
 });
-
-
 connection.connect(function (error) {
   if (!!error) {
     console.log("error");
