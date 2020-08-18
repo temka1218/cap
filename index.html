@@ -1,143 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-    <link rel="stylesheet" href="/css/tailwind.css" />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Index</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
     <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
-      integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY="
-      crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.0/tailwind.min.css"
-      integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <script>
-      var cont = 0;
-      function loopSlider() {
-        var xx = setInterval(function () {
-          switch (cont) {
-            case 0: {
-              $("#slider-1").fadeOut(400);
-              $("#slider-2").delay(400).fadeIn(400);
-              $("#sButton1").removeClass("bg-red-700");
-              $("#sButton2").addClass("bg-red-700");
-              cont = 1;
-
-              break;
-            }
-            case 1: {
-              $("#slider-2").fadeOut(400);
-              $("#slider-1").delay(400).fadeIn(400);
-              $("#sButton2").removeClass("bg-red-700");
-              $("#sButton1").addClass("bg-red-700");
-
-              cont = 0;
-
-              break;
-            }
-          }
-        }, 8000);
-      }
-
-      function reinitLoop(time) {
-        clearInterval(xx);
-        setTimeout(loopSlider(), time);
-      }
-
-      function sliderButton1() {
-        $("#slider-2").fadeOut(400);
-        $("#slider-1").delay(400).fadeIn(400);
-        $("#sButton2").removeClass("bg-red-700");
-        $("#sButton1").addClass("bg-red-700");
-        reinitLoop(4000);
-        cont = 0;
-      }
-
-      function sliderButton2() {
-        $("#slider-1").fadeOut(400);
-        $("#slider-2").delay(400).fadeIn(400);
-        $("#sButton1").removeClass("bg-red-700");
-        $("#sButton2").addClass("bg-red-700");
-        reinitLoop(4000);
-        cont = 1;
-      }
-      $(window).ready(function () {
-        $("#slider-2").hide();
-        $("#sButton1").addClass("bg-red-700");
-        loopSlider();
-      });
-    </script>
+    <title>Document</title>
   </head>
   <body
-    class="bg-fixed ..."
-    style="background-image: url(/src/img/bodybackground.jpg);"
+    class="bg-auto sm:bg-cover md:bg-contain lg:bg-auto xl:bg-cover ..."
+    style="background-image: url(/src/img/bckckck.jpg);"
   >
-    <div id="navigation-bar"></div>
-    <script src="/JS/loadReapetedDivs.js"></script>
-    <!--                       Slider хэсэг                      -->
-
-    <div class="sliderAx h-auto py-8">
-      <div id="slider-1" class="container mx-auto">
-        <div
-          class="bg-cover bg-center h-auto text-white py-24 px-10 object-fill"
-          style="
-            background-image: url(https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1422&q=80);
-          "
-        >
-          <div class="md:w-1/2"></div>
-        </div>
-        <br />
-      </div>
-
-      <div id="slider-2" class="container mx-auto">
-        <div
-          class="bg-cover bg-top h-auto text-white py-24 px-10 object-fill"
-          style="
-            background-image: url(https://images.unsplash.com/photo-1544144433-d50aff500b91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
-          "
-        ></div>
-        <br />
-      </div>
-    </div>
-    <div class="flex justify-between w-12 mx-auto pb-2">
-      <button
-        id="sButton1"
-        onclick="sliderButton1()"
-        class="bg-red-700 rounded-full w-4 pb-2"
-      ></button>
-      <button
-        id="sButton2"
-        onclick="sliderButton2() "
-        class="bg-red-700 rounded-full w-4 p-2"
-      ></button>
-    </div>
-    <!--                                             Content ууд                           -->
     <div>
-      <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Animes</h4>
-      <div class="mt-8 grid grid-cols-3 gap-10 w-10/12">
-        <div class="card">
-          <img
-            src="/src/img/kiminonawakimimi.jpg"
-            alt="stew"
-            class="w-full h-32 sm:h-48 object-cover"
-          />
-          <div class="m-4">
-            <span class="font-bold"> Kimi no nawa</span>
-            <span class="block text-gray-500 text-sm">Оруулсан Temka</span>
-          </div>
-          <div class="badge">25mins</div>
-        </div>
+      <div class="absolute top-0 right-0 pt-8 pr-16">
+        <button
+          class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded-full"
+        >
+          <a href="/login.html">
+            Нэвтрэх
+          </a>
+        </button>
       </div>
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold mb-2 text-white">
+          Smart Health Monitoring Wristwatch!
+        </h2>
+        <h3 class="text-2xl mb-8 text-gray-200">
+          Monitor your health vitals smartly anywhere you go.
+        </h3>
+      </div>
+      <section class="container mx-auto px-6 p-10">
+        <h2 class="text-4xl font-bold text-center text-gray-200 mb-8"></h2>
+        <div class="flex items-center flex-wrap mb-20">
+          <div class="w-full md:w-1/2">
+            <h4 class="text-3xl text-gray-200 font-bold mb-3">
+              Мэдээ мэдээлэл
+            </h4>
+            <p class="text-gray-200 mb-8">
+              Та манай site-д нэвтэрснээр анимэ уудын талаар мэдээллэс
+              хоцрохгүй.
+            </p>
+          </div>
+          <div class="w-full md:w-1/2">
+            <img src="/src/img/wdwadadawadawd.jpg" alt="Monitoring" />
+          </div>
+        </div>
+
+        <div class="flex items-center flex-wrap mb-10">
+          <div class="w-full md:w-1/2">
+            <img src="/src/img/wdwadadawadawd.jpg" alt="Reporting" />
+          </div>
+          <div class="w-full md:w-1/2 pl-10">
+            <h4 class="text-3xl text-gray-200 font-bold mb-3">
+              Хязгааргүй үзэх эрх
+            </h4>
+            <p class="text-gray-200 mb-8">
+              Our Smart Health Monitoring Wristwatch can generate a
+              comprehensive report on your vitals depending on your settings
+              either daily, weekly, monthly, quarterly or yearly.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center flex-wrap mb-20">
+          <div class="w-full md:w-1/2">
+            <h4 class="text-3xl text-gray-200 font-bold mb-3">Syncing</h4>
+            <p class="text-gray-200 mb-8">
+              Our Smart Health Monitoring Wristwatch allows you to sync data
+              across all your mobile devices whether iOS, Android or Windows OS
+              and also to your laptop whether MacOS, GNU/Linux or Windows OS.
+            </p>
+          </div>
+          <div class="w-full md:w-1/2">
+            <img src="/src/img/image.jpg" alt="Syncing" />
+          </div>
+        </div>
+      </section>
     </div>
     <div id="Footer"></div>
     <script src="/JS/loadReapetedFooters.js"></script>

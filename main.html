@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/css/tailwind.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Index</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+      integrity="sha256-x8PYmLKD83R9T/sYmJn1j3is/chhJdySyhet/JuHnfY="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.0/tailwind.min.css"
+      integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      var cont = 0;
+      function loopSlider() {
+        var xx = setInterval(function () {
+          switch (cont) {
+            case 0: {
+              $("#slider-1").fadeOut(400);
+              $("#slider-2").delay(400).fadeIn(400);
+              $("#sButton1").removeClass("bg-red-700");
+              $("#sButton2").addClass("bg-red-700");
+              cont = 1;
+
+              break;
+            }
+            case 1: {
+              $("#slider-2").fadeOut(400);
+              $("#slider-1").delay(400).fadeIn(400);
+              $("#sButton2").removeClass("bg-red-700");
+              $("#sButton1").addClass("bg-red-700");
+
+              cont = 0;
+
+              break;
+            }
+          }
+        }, 8000);
+      }
+
+      function reinitLoop(time) {
+        clearInterval(xx);
+        setTimeout(loopSlider(), time);
+      }
+
+      function sliderButton1() {
+        $("#slider-2").fadeOut(400);
+        $("#slider-1").delay(400).fadeIn(400);
+        $("#sButton2").removeClass("bg-red-700");
+        $("#sButton1").addClass("bg-red-700");
+        reinitLoop(4000);
+        cont = 0;
+      }
+
+      function sliderButton2() {
+        $("#slider-1").fadeOut(400);
+        $("#slider-2").delay(400).fadeIn(400);
+        $("#sButton1").removeClass("bg-red-700");
+        $("#sButton2").addClass("bg-red-700");
+        reinitLoop(4000);
+        cont = 1;
+      }
+      $(window).ready(function () {
+        $("#slider-2").hide();
+        $("#sButton1").addClass("bg-red-700");
+        loopSlider();
+      });
+    </script>
+  </head>
+  <body>
+    <div id="navigation-bar"></div>
+    <script src="/JS/loadReapetedDivs.js"></script>
+    <!--                       Slider хэсэг                      -->
+
+    <div class="sliderAx h-auto py-8">
+      <div id="slider-1" class="container mx-auto">
+        <div
+          class="bg-cover bg-center h-auto text-white py-24 px-10 object-fill"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1544427920-c49ccfb85579?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1422&q=80);
+          "
+        >
+          <div class="md:w-1/2"></div>
+        </div>
+        <br />
+      </div>
+
+      <div id="slider-2" class="container mx-auto">
+        <div
+          class="bg-cover bg-top h-auto text-white py-24 px-10 object-fill"
+          style="
+            background-image: url(https://images.unsplash.com/photo-1544144433-d50aff500b91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+          "
+        ></div>
+        <br />
+      </div>
+    </div>
+    <div class="flex justify-between w-12 mx-auto pb-2">
+      <button
+        id="sButton1"
+        onclick="sliderButton1()"
+        class="bg-red-700 rounded-full w-4 pb-2"
+      ></button>
+      <button
+        id="sButton2"
+        onclick="sliderButton2() "
+        class="bg-red-700 rounded-full w-4 p-2"
+      ></button>
+    </div>
+    <!--                                             Content ууд                           -->
+    <div>
+      <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Animes</h4>
+      <div class="mt-8 grid grid-cols-3 gap-10 w-10/12">
+        <div class="card">
+          <img
+            src="/src/img/kiminonawakimimi.jpg"
+            alt="stew"
+            class="w-full h-32 sm:h-48 object-cover"
+          />
+          <div class="m-4">
+            <span class="font-bold"> Kimi no nawa</span>
+            <span class="block text-gray-500 text-sm">Оруулсан Temka</span>
+          </div>
+          <div class="badge">25mins</div>
+        </div>
+      </div>
+    </div>
+    <div id="Footer"></div>
+    <script src="/JS/loadReapetedFooters.js"></script>
+
+    
+  </body>
+</html>
